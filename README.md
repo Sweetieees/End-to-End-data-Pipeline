@@ -35,6 +35,13 @@ The analytics job computes:
 - Daily Active Users (DAU)
 - Most popular genres
 
+## Performance Optimizations
+- Cached frequently reused datasets to avoid recomputation
+- Partitioned data by event_date to enable partition pruning
+- Used broadcast joins for small dimension tables
+- Analyzed execution plans using Spark explain()
+
+
 ## How to Run
 ```bash
 # Run ETL
