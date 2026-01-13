@@ -41,6 +41,9 @@ The analytics job computes:
 - Used broadcast joins for small dimension tables
 - Analyzed execution plans using Spark explain()
 
+## Orchestration (Apache Airflow)
+The pipeline is designed to be orchestrated using Apache Airflow, with separate tasks for ETL and analytics Spark jobs.
+Due to native Windows limitations, the DAG was validated conceptually and is intended to be deployed in a Linux or containerized environment.
 
 ## How to Run
 ```bash
